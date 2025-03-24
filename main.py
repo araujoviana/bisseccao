@@ -53,5 +53,18 @@ def main():
     print("D2:")
     print(f"A segunda raiz de x cos x - 2x^2 + 3x - 1 é: {bisseccao(lambda x: x*math.cos(x)-(2*x**2)+3*x-1, 1.2, 1.3, epsilon, max_iteracoes)}")
 
+
+    # Exercício 4
+
+    print("\nExercício 4:", end="\n\n")
+
+    lista_iteracoes = [1, 10, 30, 40, 50, 51, 52, 53, 55, 60, 70, 80, 100, 120 , 1000, 10000]
+    for max_iteracoes in lista_iteracoes:
+        print(f"Maximo de iterações = {max_iteracoes}:")
+
+        resultado = bisseccao(lambda x: x - 2 ** (-x), 0, 1, epsilon, max_iteracoes)
+
+        print(f"A raiz de x - 2^(-x) é: {resultado}\n")
+
 if __name__ == "__main__":
     main()
